@@ -38,7 +38,7 @@ const Main = () => {
   }
 
   const navigate = useNavigate();
-  function submitForm(formData) {
+  function SubmitForm(formData) {
     if (submitAPI(formData)) {
       navigate("/confirmed");
     }
@@ -54,7 +54,7 @@ const Main = () => {
             <Booking
               availableTimes={state}
               dispatch={dispatch}
-              submitForm={submitForm}
+              SubmitForm={SubmitForm}
             />
           }
         />

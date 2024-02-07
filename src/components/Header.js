@@ -1,9 +1,29 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
+import banner from '../images/restauranfood.jpg'
 
 const Header = () => {
   return (
-    <div>Header</div>
-  )
-}
+    <header className="header">
+      <section>
+        {/*banner section*/}
+        <div className="banner">
+          <h2>Little Lemon</h2>
+          <h3>Chicago</h3>
+          <p>
+            We are a family owned Mediterranean restaurant, focused on
+            traditional recipes served with a modern twist.
+          </p>
+          <Link to='/booking'><button aria-label="On Click">Reserve Table</button></Link>
+        </div>
 
-export default Header
+        {/*banner image*/}
+        <div className="banner-img">
+            <img src={banner} />
+        </div>
+      </section>
+    </header>
+  );
+};
+
+export default Header;
